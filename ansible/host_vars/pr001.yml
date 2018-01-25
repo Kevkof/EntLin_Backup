@@ -1,0 +1,24 @@
+# host_vars only visible to pr001
+---
+dhcp_global_default_lease_time: 43200
+dhcp_global_max_lease_time: 43200
+dhcp_global_subnet_make: 255.255.0.0
+dhcp_global_domain_name: avalon.lan
+dhcp_global_domain_name_servers:
+      - 192.0.2.10
+      - 192.0.2.11
+      - 10.0.2.3
+dhcp_global_routers: 172.16.255.254           
+dhcp_subnets:
+      - ip: 172.16.0.0
+        netmask: 255.255.0.0
+        range_begin: 172.16.128.1
+        range_end: 172.16.191.254
+      - ip: 172.16.0.0
+        netmask: 255.255.0.0
+        range_begin: 172.16.192.1
+        range_end: 172.16.255.253
+dhcp_hosts: 
+  - name: workstation
+    mac: 08:00:27:44:F1:36
+    ip: 172.16.155.155

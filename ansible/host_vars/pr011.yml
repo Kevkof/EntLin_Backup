@@ -1,0 +1,155 @@
+# Host Variables visible to pr011
+---
+rhbase_firewall_allow_services:
+  - samba
+  - ftp
+rhbase_users:
+  - name: kevin
+    comment: Administrator
+    groups:
+      - wheel
+      - it
+      - public
+    password: '$6$.VHJpTDWeyC..5dU$YtBseHKQelFiidMftGufH2Txq1Tt34d6.yOpLRR85crbRd0dG39P0gVfJYF3/AtYdWVNGcCgWrhDLhcYM6SDM/'
+  - name: stevenh
+    groups:
+      - management
+      - public
+    password: '$6$KFsYYBWHERUJtmIY$nuIOJym3vld81PCvM1wdLJ31YCN7M6eQrBr6AVrhvHAfbRucU12xQ6eHC0b7Id2zNh3LTJ3NGlM04Nv0V4ZzI/'
+    shell: /sbin/nologin
+  - name: stevenv
+    groups:
+      - technical
+      - public
+    password: '$6$8lZt5tO1sH8/QwPN$FAkzpy15ZkIKgcENAFvbRYu4vEjpg9Qi7yeStUqZaRUlYPqRHtGN63nSwf2M1lCsq9fQxGV.qyA4MdU9JXCcC/'
+    shell: /sbin/nologin
+  - name: leend
+    groups:
+      - technical
+      - public
+    password: '$6$9vlv3yK.dx2/dD2d$.LqrkNyXRIWSdqgyruI9yjqx2Ltl38uVELoBi63DGQmgI1I.M8F91kFH9/an4J4UvjVw9RYnP6P/1N5yl5UDw.'
+    shell: /sbin/nologin
+  - name: svena
+    groups:
+      - sales
+      - public
+    password: '$6$VXA2U4sh6pmUOJUz$ftOIV9/v2o8RBKTEeAnLvRGwLkcf0qKQnRG/l02ewQOTNdKm41j5gZgpgulrI4NkA6gIWObGMELOJsToznZzQ0'
+    shell: /sbin/nologin
+  - name: nehirb
+    groups:
+      - it
+      - public
+    password: '$6$rE0C2ObB7FShjifY$9rgt2PRUXEK0lgFP.OBTTs70t3FQkU0/ajZV/jXWjdpD3hJYC2GjQ/sNG5PXBSyPO.gH2GQe0JYfj/ZSlwvjR.'
+  - name: alexanderd
+    groups:
+      - technical
+      - public
+    password: '$6$WrYCu6daGiO5cN16$8yStco5l7pyutR5uPCojktbL2z1QZnzSJtjk/FD1jq0RphiNNhIZDSDmEQx8R9VOgCLmR6A/L0yCSRHMIFNQq/'
+    shell: /sbin/nologin
+  - name: krisv
+    groups:
+      - management
+      - public
+    password: '$6$vmQ79gH9i/YUdx4t$2.ojS3tM.Z3bdAXMn1.d5.DAiUpRqwwGPhEBHfSVt.ujJpIvTUa8iFlJz5FJq5F7KmjxK3LUPT0Ransv1FZJG/'
+    shell: /sbin/nologin
+  - name: benoitp
+    groups:
+      - sales
+      - public
+    password: '$6$3YNj7r907OUST3sa$8mU/7YjCPznqZZEQ1vNmYXYGpjPwOt3hlniHPk3Y2sGO1rrbiOhmU2j7EF/hX.PsaeEVLAc2Q2TLR2.Kix1Mx.'
+    shell: /sbin/nologin
+  - name: anc
+    groups:
+      - technical
+      - public
+    password: '$6$.1YJ.leU0EcIRRoi$Gd0KwHg.FSidhSJpG2djlpH0TNKdZ9fURfR96yoh1vFatD7PVloKJcwmoXCvXUUTpv/v0y5iKzL9cjNd4v3X7.'
+    shell: /sbin/nologin
+  - name: elenaa
+    groups:
+      - management
+      - public
+    password: '$6$ERbtAazFHEQQJ/WY$4PXjTGPpeowti27YirwcAQzJWIO9qf3h0LTExscMUr6Jv7SSsge7XrCkzg276BRUqtcIGTn67PTwnSx9MKjee0'
+    shell: /sbin/nologin
+  - name: evyt
+    groups:
+      - technical
+      - public
+    password: '$6$7jMRalihQFWxd7l4$A2dK8TgCZPArBDNApEKyGGIhHAKT/hpfUj9/CdTYtrEpTuD8zabsTDuzE/vmKkX2UOgbQjvdT8.OG1XlWr9EM/'
+    shell: /sbin/nologin
+  - name: christophev
+    groups:
+      - it
+      - public
+    password: '$6$QlOtN3eOCeDg24b5$/GuOd96MS5VPdTnFetIXY51po4qmkRuIJusFo97GnuGnKql7qBKPsi4mHtKrfT6jXUHqO.8jx7st5hxoe9nAN/'
+  - name: stefaanv
+    groups:
+      - technical
+      - public
+    password: '$6$Er6BYCbL9xaPiMsr$YMkBBRy7HjzJ3uLlgvO8.swCCLzlOn/VOBbK7a75lvUJNF4TyA4cRi9fwXE2WHSprpdtXTBY6ZhAS1WranDBo0'
+    shell: /sbin/nologin
+
+samba_users:
+  - name: stevenh
+    password: stevenh
+  - name: stevenv
+    password: stevenv
+  - name: leend
+    password: leend
+  - name: svena
+    password: svena
+  - name: nehirb
+    password: nehirb
+  - name: alexanderd
+    password: alexanderd
+  - name: krisv
+    password: krisv
+  - name: benoitp
+    password: benoitp
+  - name: anc
+    password: anc
+  - name: elenaa
+    password: elenaa
+  - name: evyt
+    password: evyt
+  - name: christophev
+    password: christophev
+  - name: stefaanv
+    password: stefaanv
+  - name: kevin
+    password: kevin
+
+samba_netbios_name: files
+
+samba_shares:
+  - name: public
+    group: public
+    write_list: +public
+    valid_users: +public
+    setype: public_content_t
+    directory_mode: '0770'
+  - name: it
+    group: it
+    write_list: +it
+    valid_users: +management, +it
+    directory_mode: '0770'
+  - name: management
+    group: management
+    write_list: +management
+    valid_users: +management
+    directory_mode: '0770'
+  - name: technical
+    group: technical
+    write_list: +technical
+    valid_users: +public
+  - name: sales
+    group: sales
+    write_list: +sales
+    valid_users: +sales, +management
+    directory_mode: '0770'
+
+vsftpd_anonymous_enable: false
+vsftpd_local_enable: true
+vsftpd_local_root: /srv/shares
+vsftpd_options:
+  - key: ftpd_banner
+    value: 'Welcome to the Kevkof ftp service'

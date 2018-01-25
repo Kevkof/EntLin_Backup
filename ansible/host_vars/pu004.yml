@@ -1,0 +1,19 @@
+# host_vars/pu004.yml
+# Variables visible to only pu004
+---
+rhbase_firewall_allow_services: 
+  - http
+  - https
+mariadb_root_password: fogMeHud8
+mariadb_databases:
+  - name: wp_db
+mariadb_users:
+  - name: wp_user
+    password: CorkIgWac
+    priv: 'wp_db.*:ALL,GRANT'
+httpd_scripting: 'php'
+wordpress_database: wp_db
+wordpress_user: wp_user
+wordpress_password: CorkIgWac
+httpd_SSLCertificateFile: /etc/pki/tls/certs/pu004.crt
+httpd_SSLCertificateKeyFile: /etc/pki/tls/private/pu004.key

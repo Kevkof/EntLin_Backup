@@ -1,0 +1,32 @@
+# group_vars/all.yml
+# Variables visible to all nodes
+---
+rhbase_ssh_user: kevin
+rhbase_ssh_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2XP5i6tIp7MynoDLhjatsf2Zsn/IOkFsJhjThvCXspIhFgFYM+KDfbsMsOSfUcxXyYEH0sMH0ozL3kuJO8ykVitgqqau22gUwIW48c5nsqDla0RNOIo+7cCl8CyXRJptuxgaHDAU4TqOzhjd4hHxzvRWEe6bHRxwS2DX/4Lz8uqlBbhULoyVaggorTKsL7SF3qy2mCDCcMQr93WslByPAaDD28JKe2DUFVMBlUfusJFgrhN1YcUHrWPQJujRrUqCRgfRpM7kl8lCaQiIbDpZA2Rcxui44v7ZFBmnpov2U3s0ho+4wFtOLX1Depd7BFisDEXh4VzTvQLlvGkpEEtiR kevin@KevkofWhite'
+rhbase_motd: true
+rhbase_repositories:
+  - epel-release
+rhbase_install_packages:     
+  - bash-completion
+  - bind-utils
+  - git
+  - nano
+  - tree
+  - vim-enhanced
+  - wget
+rhbase_start_services:
+  - sshd
+rhbase_user_groups:
+  - management
+  - technical
+  - sales
+  - it
+  - public
+rhbase_users:
+  - name: kevin
+    comment: Administrator
+    groups: 
+      - wheel
+      - it
+    password: '$6$.VHJpTDWeyC..5dU$YtBseHKQelFiidMftGufH2Txq1Tt34d6.yOpLRR85crbRd0dG39P0gVfJYF3/AtYdWVNGcCgWrhDLhcYM6SDM/'
+  

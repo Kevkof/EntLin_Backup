@@ -1,0 +1,61 @@
+# site.yml
+---
+- hosts: all
+  become: true
+  roles:
+    - bertvv.rh-base
+
+- hosts: pu004
+  become: true
+  roles:
+    - bertvv.httpd
+    - bertvv.mariadb
+    - bertvv.wordpress
+  pre_tasks:
+    - name: Copy certificate
+      copy:
+        src: /vagrant/ansible/files/pu004.crt
+        dest: /etc/pki/tls/certs/
+    - name: Copy private key
+      copy:
+        src: /vagrant/ansible/files/pu004.key
+        dest: /etc/pki/tls/private/
+
+- hosts: pu001
+  become: true
+  roles:
+    - bertvv.bind
+
+- hosts: pu002
+  become: true
+  roles:
+    - bertvv.bind
+
+- hosts: pr011
+  become: true
+  roles:
+    - bertvv.samba
+    - bertvv.vsftpd
+  post_tasks:
+    - name: ACL for the share IT
+      acl:
+        path: /srv/shares/it
+        entity: management
+        etype: group
+        permissions: rx
+        state: present
+    - name: ACL for the share Sales
+      acl:
+        path: /srv/shares/sales
+        entity: management
+        etype: group
+        permissions: rx
+        state: present
+    - name: Restart Vsftpd
+      shell: systemctl restart vsftpd
+
+- hosts: pr001
+  become: true
+  roles:
+    - bertvv.dhcp
+    
